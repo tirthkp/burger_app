@@ -3,11 +3,7 @@
 import 'package:flutter/material.dart';
 
 class Favorite extends StatelessWidget {
-  final String imgpath;
-  final String name;
-  final String subname;
-  final String rating;
-  final String price;
+  final String imgpath, price, rating, subname, name;
 
   const Favorite(
       {Key? key,
@@ -21,20 +17,25 @@ class Favorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 15.0),
+      padding: const EdgeInsets.only(right: 8.0),
       child: Container(
+        width: 200,
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Color.fromARGB(235, 22, 21, 21)),
+          borderRadius: BorderRadius.circular(20),
+          color: Color.fromARGB(235, 22, 21, 21),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
               child: Image.asset(
                 imgpath,
-                height: 200,
+                height: 150,
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Text(
               name,
@@ -57,15 +58,13 @@ class Favorite extends StatelessWidget {
               height: 10,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   rating,
                   style: TextStyle(
                     color: Colors.white,
                   ),
-                ),
-                SizedBox(
-                  width: 100,
                 ),
                 Text(
                   '\$$price',

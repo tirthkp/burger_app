@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                   height: 20,
                 ),
                 Container(
-                  height: 320,
+                  height: 280,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [

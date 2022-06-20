@@ -3,11 +3,7 @@
 import 'package:flutter/material.dart';
 
 class Restruants extends StatelessWidget {
-  final String imgpath;
-  final String resname;
-  final String rating;
-  final String distance;
-  final String price;
+  final String imgpath, price, distance, resname, rating;
   const Restruants(
       {Key? key,
       required this.imgpath,
